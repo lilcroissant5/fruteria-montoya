@@ -1,0 +1,21 @@
+import HeroFruit from "@/public/edgar.jpeg";
+
+export default function ContactPage() {
+    return (
+        <div className="min-h-screen mt-6">
+            <main className="min-h-screen flex flex-col items-center justify-center text-center">
+                contacts page
+                <p className="mb-6 text-lg font-semibold">
+                    ESTA PAGINA ESTA EN CONSTRUCCION :)
+                </p>
+
+                <img
+                    src={HeroFruit.src}
+                    alt="Hero Fruit"
+                    className="w-100 h-auto"
+                />
+
+            </main>
+        </div>
+    );
+}

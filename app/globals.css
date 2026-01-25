@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #ffffff;
+  --font-mako: "Mako", sans-serif;
+
+  /* brand colors */
+  --brand-orange: #ff4e00;
+  --brand-orange-light: #fa621e;
+  --brand-green: #1e5627;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-mako);
+  --color-orange: var(--brand-orange);
+  --color-orange-light: var(--brand-orange-light);
+  --color-green: var(--brand-green);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: rgb(23, 68, 25);
+  color: white;
+  font-family: var(--font-mako);
+}
