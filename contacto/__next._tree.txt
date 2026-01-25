@@ -1,4 +1,4 @@
 :HL["/fruteria-montoya/_next/static/chunks/79ad40690962dac9.css","style"]
 :HL["/fruteria-montoya/_next/static/media/f8183e488e5021dd-s.p.6469ff0a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/fruteria-montoya/_next/static/media/edgar.ba6aa81a.jpeg","image"]
-0:{"buildId":"1CYhimx9Cj2lAvp6k80JP","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"contacto","paramType":null,"paramKey":"contacto","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"xQWuLVy321amvGeQzWgD9","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"contacto","paramType":null,"paramKey":"contacto","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
