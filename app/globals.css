@@ -23,12 +23,12 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #ffffff;
-    --foreground: #ededed;
+    --foreground: #d9eec2;
   }
 }
 
 body {
-  background: rgb(23, 68, 25);
+  background: #b2d19e;
   color: white;
   font-family: var(--font-mako);
 }
