@@ -26,8 +26,8 @@ export default function Home() {
           />
 
           {/* Text */}
-          <div className={`absolute left-1/2 -translate-x-1/2 w-[90%] max-w-xl flex flex-col items-center justify-center top-[clamp(2rem,20vw,12rem)] ${libreBodoni.className}`}>
-            <h1 className="text-green text-center drop-shadow-lg text-[clamp(2rem,8vw,7rem)] leading-tight">
+          <div className={`absolute left-1/2 -translate-x-1/2 w-[90%] max-w-xl flex flex-col items-center justify-center top-[clamp(2rem,23vw,12rem)] ${libreBodoni.className}`}>
+            <h1 className="text-green text-center drop-shadow-lg text-[clamp(3rem,8vw,7rem)] leading-tight">
               ESPECIALISTAS EN <br />NARANJA PARA JUGO
             </h1>
           </div>
