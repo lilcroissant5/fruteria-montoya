@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect, useState } from 'react'
 import Image from "next/image";
 import Logo from "@/public/globe.svg"
 import HeroFruitMobile from "@/public/montoya-hero-mobile.png"
@@ -12,7 +15,14 @@ const libreBodoni = Londrina_Solid({
 });
 
 
+
 export default function Home() {
+  const [animate, setAnimate] = useState(false)
+
+  useEffect(() => {
+    setAnimate(true)
+  }, [])
+
   return (
     <div>
       <main >
@@ -26,12 +36,22 @@ export default function Home() {
           />
 
           {/* Text */}
-          <div className={`absolute left-1/2 -translate-x-1/2 w-[90%] max-w-xl flex flex-col items-center justify-center top-[clamp(2rem,23vw,12rem)] ${libreBodoni.className}`}>
+
+          <div
+            className={`absolute left-1/2 -translate-x-1/2 w-[90%] max-w-xl flex flex-col items-center justify-center top-[clamp(2rem,23vw,12rem)] 
+              ${libreBodoni.className} transition-all duration-[1000ms] delay-200 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)]
+              ${animate ? 'opacity-100 translate-y-0 scale-[1.02] blur-0' : 'opacity-0 -translate-y-6 scale-[0.98] blur-sm'}`}
+          >
             <h1 className="text-green text-center drop-shadow-lg text-[clamp(2.6rem,7vw,7rem)] leading-tight">
-              ESPECIALISTAS EN <br />NARANJA PARA JUGO
+              ESPECIALISTAS EN <br /> NARANJA PARA JUGO
             </h1>
           </div>
-          <div className={`absolute bottom-[clamp(1rem,0vw,10rem)] left-1/2 -translate-x-1/2 w-[90%] max-w-xl flex flex-col items-center justify-center mt-16`}>
+
+
+
+          <div className={`absolute bottom-[clamp(1rem,0vw,10rem)] left-1/2 -translate-x-1/2 w-[90%] max-w-xl flex flex-col items-center justify-center mt-16
+            transition-all duration-[1000ms] delay-200 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)]
+          ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
             <h1 className={`text-green text-center drop-shadow-lg text-[clamp(1rem,5vw,4rem)] leading-tight ${libreBodoni.className}`}>
               Los más frescos cítricos y frutas para restaurantes y mayoristas en Mercado Gómez Campana.
             </h1>
