@@ -48,7 +48,7 @@ export default function Navbar() {
                         <img
                             src={Logo.src}
                             alt="Fruteria Montoya Logo"
-                            className="w-[clamp(50px,12vw,100px)] h-auto"
+                            className="w-[clamp(75px,12vw,100px)] h-auto"
                         />
 
                     </div>
