@@ -52,28 +52,17 @@ export default function Home() {
               Los más frescos cítricos y frutas para restaurantes y mayoristas en Mercado Gómez Campana.
             </h1>
           </div>
-<Link
-      href="https://wa.me/15551234567" // replace with your number
-      target="_blank"
-      rel="noopener noreferrer"
-      className="fixed bottom-5 right-5 z-50 group"
-    >
-      {/* Green circular button with bounce and glow */}
-      <div
-        className="relative flex flex-col items-center justify-center w-15 h-15
-                   bg-green-500 rounded-full shadow-lg shadow-green-500/40
-                   transition-all duration-300 hover:scale-110 hover:shadow-green-600/70
-                   active:scale-95 animate-bounce-slow"
-      >
-        {/* WhatsApp Icon */}
-        <FaWhatsapp className="w-10 h-10 text-white drop-shadow-md z-10" />
-
-
-
-        {/* Glow effect */}
-        <span className="absolute inset-0 rounded-full bg-green-400/40 blur-xl animate-pulse-glow z-0"></span>
-      </div>
-    </Link>
+          <Link
+            href="https://wa.me/15551234567"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="fixed bottom-5 right-5 z-50 group">
+            <div className="relative flex flex-col items-center justify-center w-15 h-15 bg-green-500 rounded-full shadow-lg shadow-green-500/40
+                   transition-all duration-300 hover:scale-110 hover:shadow-green-600/70 active:scale-95 animate-bounce-slow">
+              <FaWhatsapp className="w-10 h-10 text-white drop-shadow-md z-10" />
+                <span className="absolute inset-0 rounded-full bg-green-400/40 blur-xl animate-pulse-glow z-0"></span>
+            </div>
+          </Link>
         </div>
 
         {/* Desktop Version*/}

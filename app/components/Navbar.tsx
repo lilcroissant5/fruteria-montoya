@@ -21,6 +21,12 @@ export default function Navbar() {
     };
 
     useEffect(() => {
+  if (typeof window !== "undefined") {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+  }
+}, [menuOpen]);
+
+    useEffect(() => {
         const controlNavbar = () => {
             if (typeof window !== "undefined") {
                 if (window.scrollY > lastScrollY && window.scrollY > 100) {
@@ -91,7 +97,7 @@ export default function Navbar() {
                 </div>
                 <div
                     onClick={handleNav}
-                    className="lg:hidden cursor-pointer z-50 text-white"
+                    className="lg:hidden cursor-pointer z-70 text-white"
                 >
                     {menuOpen ?
                         <AiOutlineClose size={25} />
@@ -100,7 +106,7 @@ export default function Navbar() {
                     }
                 </div>
                 <div
-                    className={`min-[990px]:hidden fixed inset-0 w-full h-[95dvh] overflow-y-auto bg-green/95 backdrop-blur-lg z-40 flex flex-col items-center justify-center transition-all duration-500 ease-in-out rounded-2xl
+                    className={`min-[990px]:hidden fixed inset-0 w-full h-[95dvh] overflow-y-auto bg-green/95 backdrop-blur-lg z-60 flex flex-col items-center justify-center transition-all duration-500 ease-in-out rounded-tl-4xl rounded-tr-4xl rounded-bl-lg rounded-br-lg
                             ${menuOpen
                             ? "opacity-100 pointer-events-auto"
                             : "opacity-0 pointer-events-none"
