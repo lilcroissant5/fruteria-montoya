@@ -52,35 +52,27 @@ export default function Home() {
               Los más frescos cítricos y frutas para restaurantes y mayoristas en Mercado Gómez Campana.
             </h1>
           </div>
-    <Link
+<Link
       href="https://wa.me/15551234567" // replace with your number
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-5 right-5 z-50 group"
     >
-      {/* Floating Button */}
+      {/* Green circular button with bounce and glow */}
       <div
-        className="relative flex items-center justify-center w-16 h-16 rounded-full
-                   bg-gradient-to-tr from-green-400 to-green-600
-                   shadow-lg shadow-green-500/40
-                   transition-all duration-300
-                   hover:scale-110 hover:shadow-green-600/60
-                   active:scale-95
-                   after:absolute after:inset-0 after:rounded-full after:bg-white/10 after:blur-xl after:opacity-0
-                   group-hover:after:opacity-100"
+        className="relative flex flex-col items-center justify-center w-15 h-15
+                   bg-green-500 rounded-full shadow-lg shadow-green-500/40
+                   transition-all duration-300 hover:scale-110 hover:shadow-green-600/70
+                   active:scale-95 animate-bounce-slow"
       >
         {/* WhatsApp Icon */}
-        <FaWhatsapp className="w-8 h-8 text-white drop-shadow-md" />
-      </div>
+        <FaWhatsapp className="w-10 h-10 text-white drop-shadow-md z-10" />
 
-      {/* Optional Tooltip */}
-      <span
-        className="absolute right-20 top-1/2 -translate-y-1/2
-                   whitespace-nowrap rounded-lg bg-black/80 px-3 py-1 text-xs text-white
-                   opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-      >
-        Escríbenos por WhatsApp
-      </span>
+
+
+        {/* Glow effect */}
+        <span className="absolute inset-0 rounded-full bg-green-400/40 blur-xl animate-pulse-glow z-0"></span>
+      </div>
     </Link>
         </div>
 
