@@ -7,6 +7,7 @@ import HeroFruitMobile from "@/public/montoya-hero-mobile.png"
 import HeroFruit from "@/public/montoya-hero.png"
 import { Londrina_Solid } from "next/font/google";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
 
 const libreBodoni = Londrina_Solid({
   subsets: ["latin"],
@@ -35,31 +36,55 @@ export default function Home() {
             className="w-full h-auto"
           />
 
-          {/* Text */}
-
+          {/* Mobile Version*/}
           <div
             className={`absolute left-1/2 -translate-x-1/2 w-[90%] max-w-xl flex flex-col items-center justify-center top-[clamp(2rem,23vw,12rem)] 
               ${libreBodoni.className} transition-all duration-[1000ms] delay-200 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)]
-              ${animate ? 'opacity-100 translate-y-0 scale-[1.02] blur-0' : 'opacity-0 -translate-y-6 scale-[0.98] blur-sm'}`}
-          >
+              ${animate ? 'opacity-100 translate-y-0 scale-[1.02] blur-0' : 'opacity-0 -translate-y-6 scale-[0.98] blur-sm'}`}>
             <h1 className="text-green text-center drop-shadow-lg text-[clamp(2.6rem,7vw,7rem)] leading-tight">
               ESPECIALISTAS EN <br /> NARANJA PARA JUGO
             </h1>
           </div>
-
-
-
           <div className={`absolute bottom-[clamp(1rem,0vw,10rem)] left-1/2 -translate-x-1/2 w-[90%] max-w-xl flex flex-col items-center justify-center mt-16
             transition-all duration-[1000ms] delay-200 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)]
           ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
             <h1 className={`text-green text-center drop-shadow-lg text-[clamp(1rem,5vw,4rem)] leading-tight ${libreBodoni.className}`}>
               Los más frescos cítricos y frutas para restaurantes y mayoristas en Mercado Gómez Campana.
             </h1>
-
           </div>
+    <Link
+      href="https://wa.me/15551234567" // replace with your number
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-5 right-5 z-50 group"
+    >
+      {/* Floating Button */}
+      <div
+        className="relative flex items-center justify-center w-16 h-16 rounded-full
+                   bg-gradient-to-tr from-green-400 to-green-600
+                   shadow-lg shadow-green-500/40
+                   transition-all duration-300
+                   hover:scale-110 hover:shadow-green-600/60
+                   active:scale-95
+                   after:absolute after:inset-0 after:rounded-full after:bg-white/10 after:blur-xl after:opacity-0
+                   group-hover:after:opacity-100"
+      >
+        {/* WhatsApp Icon */}
+        <FaWhatsapp className="w-8 h-8 text-white drop-shadow-md" />
+      </div>
+
+      {/* Optional Tooltip */}
+      <span
+        className="absolute right-20 top-1/2 -translate-y-1/2
+                   whitespace-nowrap rounded-lg bg-black/80 px-3 py-1 text-xs text-white
+                   opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+      >
+        Escríbenos por WhatsApp
+      </span>
+    </Link>
         </div>
 
-        {/**************************************************************************  Desktop / large screen */}
+        {/* Desktop Version*/}
         <div className="hidden lg:block relative w-full">
           <Image
             src={HeroFruit}
