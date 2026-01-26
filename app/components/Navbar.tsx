@@ -106,7 +106,7 @@ export default function Navbar() {
                     }
                 </div>
                 <div
-                    className={`min-[990px]:hidden fixed inset-0 w-full h-[95dvh] overflow-y-auto bg-green/95 backdrop-blur-lg z-60 flex flex-col items-center justify-center transition-all duration-500 ease-in-out rounded-tl-4xl rounded-tr-4xl rounded-bl-lg rounded-br-lg
+                    className={`min-[990px]:hidden fixed inset-0 w-full h-[80dvh] overflow-y-auto bg-green/95 backdrop-blur-lg z-60 flex flex-col items-center justify-center transition-all duration-500 ease-in-out rounded-tl-4xl rounded-tr-4xl rounded-bl-4xl rounded-br-4xl
                             ${menuOpen
                             ? "opacity-100 pointer-events-auto"
                             : "opacity-0 pointer-events-none"
