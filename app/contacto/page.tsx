@@ -1,4 +1,4 @@
-import HeroFruit from "@/public/edgar.jpeg";
+import HeroFruit from "@/public/under-construction.png";
 
 export default function ContactPage() {
     return (
