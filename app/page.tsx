@@ -34,7 +34,7 @@ export default function Home() {
       Contáctanos
     </button>
   </p>
-</div>c
+</div>
         {/* <div className="block lg:hidden relative w-full aspect-square md:aspect-video">
           <Image
             src={HeroFruitMobile}
