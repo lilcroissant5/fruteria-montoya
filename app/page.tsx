@@ -27,14 +27,14 @@ export default function Home() {
   return (
     <div>
       <main >
-         <div className="bg-[#98b551] text-black text-sm px-4 py-3 flex items-center justify-between gap-4">
-        <p className="leading-snug">
-          Especialistas en naranja para jugo. Frescura diaria y precios especiales para mayoristas. 
-        </p>
-        <button className="border border-green-900 px-4 py-1.5 font-medium whitespace-nowrap">
-          Contáctanos
-        </button>
-      </div>
+<div className="bg-[#98b551] text-black text-sm px-4 py-3 flex justify-center">
+  <p className="leading-relaxed text-center">
+    Especialistas en naranja para jugo. Frescura diaria y precios especiales para mayoristas. 
+    <button className="inline-block border border-green-900 px-4 py-1.5 font-medium whitespace-nowrap ml-2 align-middle">
+      Contáctanos
+    </button>
+  </p>
+</div>
         {/* <div className="block lg:hidden relative w-full aspect-square md:aspect-video">
           <Image
             src={HeroFruitMobile}
