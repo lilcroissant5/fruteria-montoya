@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={robotoFlex.className}>
       <body>
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
         <Footer />
       </body>

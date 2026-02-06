@@ -27,17 +27,25 @@ export default function Home() {
   return (
     <div>
       <main >
-        <div className="block lg:hidden relative w-full aspect-square md:aspect-video">
+         <div className="bg-[#98b551] text-black text-sm px-4 py-3 flex items-center justify-between gap-4">
+        <p className="leading-snug">
+          Especialistas en naranja para jugo. Frescura diaria y precios especiales para mayoristas. 
+        </p>
+        <button className="border border-green-900 px-4 py-1.5 font-medium whitespace-nowrap">
+          Contáctanos
+        </button>
+      </div>
+        {/* <div className="block lg:hidden relative w-full aspect-square md:aspect-video">
           <Image
             src={HeroFruitMobile}
             alt="Fruit Hero Image"
             width={1600}
             height={900}
             className="w-full h-auto"
-          />
+          /> */}
 
           {/* Mobile Version*/}
-          <div
+          {/* <div
             className={`absolute left-1/2 -translate-x-1/2 w-[90%] max-w-xl flex flex-col items-center justify-center top-[clamp(2rem,23vw,12rem)] 
               ${libreBodoni.className} transition-all duration-[1000ms] delay-200 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)]
               ${animate ? 'opacity-100 translate-y-0 scale-[1.02] blur-0' : 'opacity-0 -translate-y-6 scale-[0.98] blur-sm'}`}>
@@ -63,7 +71,7 @@ export default function Home() {
                 <span className="absolute inset-0 rounded-full bg-green-400/40 blur-xl animate-pulse-glow z-0"></span>
             </div>
           </Link>
-        </div>
+        </div> */}
 
         {/* Desktop Version*/}
         <div className="hidden lg:block relative w-full">
