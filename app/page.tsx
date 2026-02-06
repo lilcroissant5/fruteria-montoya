@@ -30,7 +30,7 @@ export default function Home() {
 <div className="bg-[#98b551] text-black text-sm px-4 py-3 flex justify-center">
   <p className="leading-relaxed text-center">
     Especialistas en naranja para jugo. Frescura diaria y precios especiales para mayoristas. 
-    <button className="inline-block border border-green-900 px-4 py-1.5 font-medium whitespace-nowrap ml-2 align-middle">
+    <button className="inline-block border-2 border-black-900 px-3 py-0.75 font-medium whitespace-nowrap ml-2 mt-0.5 align-middle">
       Contáctanos
     </button>
   </p>
