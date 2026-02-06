@@ -3,6 +3,7 @@ import { Mako } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/Navbar"
 import Footer from "./components/Footer";
+import Navbar2 from "./components/Navbar2";
 
 const robotoFlex = Mako({
   subsets: ["latin"],
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={robotoFlex.className}>
       <body>
-        {/* <Navbar /> */}
+       <Navbar2 /> 
         {children}
         <Footer />
       </body>
