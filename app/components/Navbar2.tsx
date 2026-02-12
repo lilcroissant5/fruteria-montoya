@@ -19,7 +19,7 @@ export default function Navbar2() {
         <div>
             <div className="bg-[#98b551] text-black text-sm px-4 py-3 flex justify-center">
   <p className="leading-relaxed text-center">
-    Especialistas en naranja para jugo. Frescura diaria y precios especiales para mayoristas. 
+    Especialistas en naranja para jugo. 
     <button className="inline-block border-2 border-black-900 px-3 py-0.75 font-medium whitespace-nowrap ml-2 mt-0.5 align-middle">
       Contáctanos
     </button>
@@ -27,7 +27,7 @@ export default function Navbar2() {
 </div>
          <div className="bg-[#C85A2A] px-4  flex items-center justify-between">
 
-          <img src={Logo.src} alt="Logo" className="h-12 pt-1  object-contain" />
+          <img src={Logo.src} alt="Logo" className="h-16 p-2  object-contain" />
 
    
 
