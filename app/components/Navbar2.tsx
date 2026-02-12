@@ -27,7 +27,7 @@ export default function Navbar2() {
 </div>
          <div className="bg-[#C85A2A] px-4  flex items-center justify-between">
 
-          <img src={Logo.src} alt="Logo" className="w-20 my-1.5 object-contain" />
+          <img src={Logo.src} alt="Logo" className="w-22 my-1.5 object-contain" />
 
    
 
