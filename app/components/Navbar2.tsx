@@ -25,11 +25,11 @@ export default function Navbar2() {
     </button>
   </p>
 </div>
-         <div className="bg-[#C85A2A] px-4 py-4 flex items-center justify-between">
-        <div className="text-white font-extrabold tracking-wide leading-none">
-          <span className="block text-xl">FRUTERIA</span>
+         <div className="bg-[#C85A2A] px-4  flex items-center justify-between">
 
-        </div>
+          <img src={Logo.src} alt="Logo" className="w-24 h-24 object-contain" />
+
+   
 
         <button
           aria-label="Open menu"
