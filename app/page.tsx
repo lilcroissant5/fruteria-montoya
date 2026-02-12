@@ -28,6 +28,11 @@ export default function Home() {
     <div>
       <main >
 
+
+
+
+
+
         {/* <div className="block lg:hidden relative w-full aspect-square md:aspect-video">
           <Image
             src={HeroFruitMobile}
