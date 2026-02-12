@@ -16,7 +16,7 @@ type SlideProps = {
 
 const slides: SlideProps[] = [
   {
-    image: "/image1.jpg",
+    image: "/orange-tree.png",
     title: "Fresh Oranges",
     description: "Directly from the farm",
   },
