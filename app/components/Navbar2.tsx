@@ -25,7 +25,7 @@ export default function Navbar2() {
     </button>
   </p>
 </div>
-         <div className="bg-[#C85A2A] px-4  flex items-center justify-between">
+         <div className="bg-[#ebe8e8] px-4  flex items-center justify-between">
 
           <img src={Logo.src} alt="Logo" className="w-22 my-1.5 object-contain" />
 
@@ -33,7 +33,7 @@ export default function Navbar2() {
 
         <button
           aria-label="Open menu"
-          className="text-white text-3xl"
+          className="text-black text-3xl"
         >
           <AiOutlineMenu />
         </button>
