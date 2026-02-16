@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en" className={robotoFlex.className}>
       <body>
        <Navbar3 /> 
-      
+      <HeroCarousel />
 
         {children}
         <Footer />

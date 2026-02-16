@@ -32,3 +32,84 @@ body {
   color: white;
   font-family: var(--font-mako);
 }
+
+
+
+
+
+/* ------------------ ARROWS ------------------ */
+
+/* Circle container for arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background-color: rgba(156, 122, 122, 0.3) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  /* Remove default Swiper arrow */
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent !important;
+}
+
+/* Hide default Swiper arrow pseudo-element */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: none !important;
+}
+
+/* Add custom arrow inside */
+.swiper-button-next::before {
+  content: "➔"; /* smaller arrow */
+  font-size: 16px; /* adjust size */
+  color: #ff7f50;
+}
+
+.swiper-button-prev::before {
+  content: "➔"; /* same arrow, we will rotate */
+  transform: rotate(180deg);
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* Hover effect */
+.swiper-button-next:hover::before,
+.swiper-button-prev:hover::before {
+  color: #ffa07a;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* Position left/right */
+.swiper-button-prev {
+  left: 10px !important;
+}
+.swiper-button-next {
+  right: 10px !important;
+}
+
+/* ------------------ PAGINATION DOTS ------------------ */
+
+/* Inactive dots */
+.swiper-pagination-bullet {
+  background-color: #ffffff !important;
+  opacity: 0.5 !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+/* Active dot */
+.swiper-pagination-bullet-active {
+  background-color: #85b97b !important;
+  opacity: 1 !important;
+  width: 12px !important;
+  height: 12px !important;
+}

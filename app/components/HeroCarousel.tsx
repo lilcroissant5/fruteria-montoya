@@ -12,24 +12,13 @@ type SlideProps = {
   image: string;
   title: string;
   description: string;
+  index: number;
 };
 
 const slides: SlideProps[] = [
-  {
-    image: "/orange-tree.png",
-    title: "Fresh Oranges",
-    description: "Directly from the farm",
-  },
-  {
-    image: "/image2.jpg",
-    title: "100% Natural",
-    description: "No chemicals, just nature",
-  },
-  {
-    image: "/image3.jpg",
-    title: "Premium Quality",
-    description: "Perfect for juice",
-  },
+  { image: "/gladys-hero.jpeg", title: "Fresh Oranges", description: "Directly from the farm", index: 0 },
+  { image: "/image2.jpg", title: "100% Natural", description: "No chemicals, just nature", index: 1 },
+  { image: "/image3.jpg", title: "Premium Quality", description: "Perfect for juice", index: 2 },
 ];
 
 export default function HeroCarousel() {
@@ -37,47 +26,47 @@ export default function HeroCarousel() {
     <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[60vh]">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
-        navigation
+        navigation={{
+          nextEl: ".custom-next",
+          prevEl: ".custom-prev",
+        }}
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop
         className="h-full"
       >
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
+        {slides.map((slide) => (
+          <SwiperSlide key={slide.index}>
             <Slide {...slide} />
           </SwiperSlide>
         ))}
+
+        {/* Custom Arrows */}
+        <div className="custom-prev absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 flex items-center justify-center cursor-pointer z-10 hover:bg-black/60">
+          <span className="text-orange-500 text-lg">{"<"}</span>
+        </div>
+        <div className="custom-next absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 flex items-center justify-center cursor-pointer z-10 hover:bg-black/60">
+          <span className="text-orange-500 text-lg">{">"}</span>
+        </div>
       </Swiper>
     </div>
   );
 }
 
-function Slide({ image, title, description }: SlideProps) {
+function Slide({ image, title, description, index }: SlideProps) {
+  const isFirst = index === 0;
+
   return (
     <div className="relative w-full h-full">
-      {/* Background Image */}
-      <Image
-        src={image}
-        alt={title}
-        fill
-        priority
-        className="object-cover"
-      />
+      <Image src={image} alt={title} fill className="object-cover" priority />
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-
-      {/* Text Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-          {title}
-        </h1>
-        <p className="text-lg md:text-xl max-w-xl drop-shadow-md">
-          {description}
-        </p>
-
-        {/* Optional CTA */}
+      <div
+        className={`absolute inset-0 flex flex-col justify-center text-white px-6
+          ${isFirst ? "items-start text-left pl-12 md:pl-20" : "items-center text-center"}
+        `}
+      >
+        <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">{title}</h1>
+        <p className="text-lg md:text-xl max-w-xl drop-shadow-md">{description}</p>
         <button className="mt-6 px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition">
           Learn More
         </button>
