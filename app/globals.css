@@ -100,7 +100,7 @@ body {
 
 /* Inactive dots */
 .swiper-pagination-bullet {
-  background-color: #ffffff !important;
+  background-color: #adadad !important;
   opacity: 0.5 !important;
   width: 10px !important;
   height: 10px !important;
@@ -108,7 +108,7 @@ body {
 
 /* Active dot */
 .swiper-pagination-bullet-active {
-  background-color: #85b97b !important;
+  background-color: #ffffff !important;
   opacity: 1 !important;
   width: 12px !important;
   height: 12px !important;
