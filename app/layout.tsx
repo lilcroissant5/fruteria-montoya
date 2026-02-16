@@ -5,6 +5,7 @@ import Navbar from "@/app/components/Navbar"
 import Footer from "./components/Footer";
 import Navbar2 from "./components/Navbar2";
 import HeroCarousel from "./components/HeroCarousel";
+import Navbar3 from "./components/Navbar3";
 
 const robotoFlex = Mako({
   subsets: ["latin"],
@@ -25,8 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={robotoFlex.className}>
       <body>
-       <Navbar2 /> 
-       <HeroCarousel />
+       <Navbar3 /> 
+      
+
         {children}
         <Footer />
       </body>

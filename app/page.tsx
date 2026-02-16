@@ -139,10 +139,7 @@ export default function Home() {
           </div>
 
         </div>
-        <Image src={Logo} alt="Italian Trulli" width={800} height={800}>
-        </Image>
-        <Image src={Logo} alt="Italian Trulli" width={800} height={800}>
-        </Image>
+
       </main>
     </div>
   );
