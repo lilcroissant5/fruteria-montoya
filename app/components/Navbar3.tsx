@@ -10,6 +10,7 @@ export default function Navbar3() {
 
   return (
     <nav>
+    
       {/* Main Container */}
       <div className="w-full bg-[#3F4F3C] px-5 py-3 flex items-center justify-between shadow-lg">
         
