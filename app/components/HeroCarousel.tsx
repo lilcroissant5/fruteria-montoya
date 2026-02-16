@@ -3,11 +3,11 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { Londrina_Solid } from "next/font/google";
+import { Birthstone } from "next/font/google";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-const libreBodoni = Londrina_Solid({
+const libreBodoni = Birthstone({
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
@@ -20,7 +20,7 @@ type SlideProps = {
 };
 
 const slides: SlideProps[] = [
-  { image: "/gladys-hero.jpeg", title: "Fresh Oranges", description: "Directly from the farm", index: 0 },
+  { image: "/gladys-hero.jpeg", title: "Especialistas en naranjas", description: "Naranjas frescas, jugosas y naturales", index: 0 },
   { image: "/image2.jpg", title: "100% Natural", description: "No chemicals, just nature", index: 1 },
   { image: "/image3.jpg", title: "Premium Quality", description: "Perfect for juice", index: 2 },
 ];
@@ -69,7 +69,7 @@ function Slide({ image, title, description, index }: SlideProps) {
           ${isFirst ? "items-start text-left pl-12 md:pl-20" : "items-center text-center"}
         `}
       >
-        <h1 className={`text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg ${libreBodoni.className}`}>{title}</h1>
+        <h1 className={`text-5xl md:text-6xl font-bold mb-4 mx-4 drop-shadow-lg ${libreBodoni.className}`}>{title}</h1>
         <p className="text-lg md:text-xl max-w-xl drop-shadow-md">{description}</p>
         <button className="mt-6 px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition">
           Learn More
