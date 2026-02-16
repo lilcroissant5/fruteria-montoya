@@ -43,10 +43,10 @@ export default function HeroCarousel() {
 
         {/* Custom Arrows */}
         <div className="custom-prev absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 flex items-center justify-center cursor-pointer z-10 hover:bg-black/60">
-          <span className="text-orange-500 text-lg">{"<"}</span>
+          <span className="text-white text-lg">{"<"}</span>
         </div>
         <div className="custom-next absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 flex items-center justify-center cursor-pointer z-10 hover:bg-black/60">
-          <span className="text-orange-500 text-lg">{">"}</span>
+          <span className="text-white text-lg">{">"}</span>
         </div>
       </Swiper>
     </div>

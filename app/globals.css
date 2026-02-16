@@ -80,7 +80,7 @@ body {
 /* Hover effect */
 .swiper-button-next:hover::before,
 .swiper-button-prev:hover::before {
-  color: #88094f;
+  color: #ca2781;
 }
 
 .swiper-button-next:hover,
