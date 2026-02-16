@@ -67,20 +67,20 @@ body {
 .swiper-button-next::before {
   content: "➔"; /* smaller arrow */
   font-size: 16px; /* adjust size */
-  color: #ff7f50;
+  color: #4400ff;
 }
 
 .swiper-button-prev::before {
   content: "➔"; /* same arrow, we will rotate */
   transform: rotate(180deg);
   font-size: 16px;
-  color: #ffffff;
+  color: #860000;
 }
 
 /* Hover effect */
 .swiper-button-next:hover::before,
 .swiper-button-prev:hover::before {
-  color: #ffa07a;
+  color: #88094f;
 }
 
 .swiper-button-next:hover,
