@@ -3,11 +3,11 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { Birthstone } from "next/font/google";
+import { Hurricane } from "next/font/google";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-const libreBodoni = Birthstone({
+const libreBodoni = Hurricane({
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
