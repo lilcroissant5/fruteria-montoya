@@ -3,13 +3,13 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { Hurricane } from "next/font/google";
+import { Staatliches } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import { MapPinIcon } from '@heroicons/react/24/solid'
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-const libreBodoni = Hurricane({
+const boldonse = Staatliches({
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
@@ -29,14 +29,14 @@ type SlideProps = {
 };
 
 const slides: SlideProps[] = [
-  { image: "/gladys-hero.jpeg", title: "Especialistas en naranjas", description: "Naranjas frescas, jugosas y naturales", index: 0 },
+  { image: "/oranges-background.jpeg", title: "ESPECIALISTAS EN NARANJAS", description: "Naranjas frescas, jugosas y naturales", index: 0 },
   // { image: "/image2.jpg", title: "100% Natural", description: "No chemicals, just nature", index: 1 },
   // { image: "/image3.jpg", title: "Premium Quality", description: "Perfect for juice", index: 2 },
 ];
 
 export default function HeroCarousel() {
   return (
-    <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[60vh]">
+    <div className="relative w-full h-[60vh] md:h-[60vh] lg:h-[60vh]">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         navigation={{
@@ -62,31 +62,60 @@ function Slide({ image, title, description, index }: SlideProps) {
   const isFirst = index === 0;
 
   if (index === 0) {
-    return (
-    <div className="relative w-full h-full">
-      <Image src={image} alt={title} fill className="object-cover" priority />
+return (
+<section className="relative w-full h-full overflow-hidden flex items-center justify-center text-center">
+      {/* Background Image with slight saturation boost via CSS */}
+      <Image
+        src={image}
+        alt={title}
+        fill
+        priority
+        className="object-cover scale-105 brightness-90 saturate-[1]"
+      />
 
-      <div
-        className={`absolute inset-0 flex-col text-white px-6
-          items-start text-left `}
-      >
-        <h1 className={`text-6xl md:text-6xl font-bold mt-7 mr-5 drop-shadow-lg ${libreBodoni.className}`}>{title}</h1>
-        <p className={`mt-6  pr-10 mr-12 text-md md:text-xl max-w-xl drop-shadow-md ${monserrat.className}`}>{description}</p>
-<button className="mt-16 px-10 py-2 bg-white text-orange-600 font-semibold rounded-md shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 flex items-center gap-2">
-  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
-  </svg>
-  Ubícanos
-</button>
+      {/* NEW: Warm "Juicy" Gradient Overlay - less black, more depth */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-orange-900/10 mix-blend-multiply" />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl px-6 mt-8">
+        <h1
+          className={`text-5xl sm:text-7xl md:text-8xl text-white  drop-shadow-xl ${boldonse.className}`}
+        >
+          {title}
+        </h1>
+
+        <p
+          className={`mt-4 text-lg md:text-2xl text-white/90 font-light max-w-xl mx-auto drop-shadow-md ${monserrat.className}`}
+        >
+          {description}
+        </p>
+
+      <div className="mt-10 flex justify-center">
 
 
 
-
+<button className=" mt-8 group relative px-14 py-2.5 bg-[#6ca300] hover:bg-[#7dbd00] text-white font-bold rounded-xl shadow-[0_10px_20px_-10px_rgba(108,163,0,0.5)] hover:shadow-[0_15px_25px_-5px_rgba(108,163,0,0.6)] transition-all duration-300 flex items-center gap-1 overflow-hidden active:scale-95">
+            {/* White glow effect on hover */}
+            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+            
+            <span className="mb-1">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 fill-white" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+              </svg>
+            </span>
+            <span className="text-large tracking-tight">UBÍCANOS</span>
+          </button>
 
 
       </div>
+
     </div>
-    );
+  </section>
+);
+
+
+
   }
 
   // return (
