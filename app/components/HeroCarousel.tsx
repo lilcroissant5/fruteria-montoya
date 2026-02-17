@@ -3,19 +3,19 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { Staatliches } from "next/font/google";
-import { Montserrat } from "next/font/google";
+import { Fira_Sans } from "next/font/google";
+import { Source_Sans_3 } from "next/font/google";
 import { MapPinIcon } from '@heroicons/react/24/solid'
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-const boldonse = Staatliches({
+const boldonse = Fira_Sans({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["700"],
   display: "swap",
 });
 
-const monserrat = Montserrat({
+const monserrat = Source_Sans_3({
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
