@@ -101,7 +101,7 @@ function Slide({ image, title, description, index }: SlideProps) {
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
                 </svg>
               </span>
-              <span className="text-large tracking-tight">UBÍCANOS</span>
+              <span className="text-large">UBÍCANOS</span>
             </button>
           </div>
         </div>
