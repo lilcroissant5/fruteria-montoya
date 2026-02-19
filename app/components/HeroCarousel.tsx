@@ -39,7 +39,7 @@ type SlideProps = {
 
 const slides: SlideProps[] = [
   { image: "/oranges-background.jpeg", title: "ESPECIALISTAS EN NARANJAS", description: "Naranjas frescas, jugosas y naturales", index: 0 },
-  { image: "/image2.png", title: "100% Natural", description: "No chemicals, just nature", index: 1 },
+  { image: "/image2.PNG", title: "100% Natural", description: "No chemicals, just nature", index: 1 },
   { image: "/image3.jpg", title: "Premium Quality", description: "Perfect for juice", index: 2 },
 ];
 
@@ -124,9 +124,6 @@ function Slide({ image, title, description, index }: SlideProps) {
   else if (index === 1 || index === 2) {
     return (
       <section className="relative w-full min-h-[750px] overflow-hidden justify-center px-6 ">
-
-        {/* 1. Background Image with warm golden overlay */}
-        {/* Replace '/your-market-bg.jpg' with your actual image path */}
         <div className="absolute inset-0 w-full h-full">
           <Image
             src={image}
