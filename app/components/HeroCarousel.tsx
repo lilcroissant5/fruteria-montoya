@@ -40,7 +40,7 @@ type SlideProps = {
 const slides: SlideProps[] = [
   { image: "/oranges-background.jpeg", title: "ESPECIALISTAS EN NARANJAS", description: "Naranjas frescas, jugosas y naturales", index: 0 },
   { image: "/image2.PNG", title: "100% Natural", description: "No chemicals, just nature", index: 1 },
-  { image: "/image3.jpg", title: "Premium Quality", description: "Perfect for juice", index: 2 },
+ 
 ];
 
 export default function HeroCarousel() {
@@ -140,37 +140,37 @@ function Slide({ image, title, description, index }: SlideProps) {
         {/* 2. Main Content Stack */}
         <div className="relative z-10 flex flex-col items-center w-full max-w-xl mt-10">
 
-          
-       
+
+
 
 
           {/* Heading - Using dark gold/brown tones for elegance */}
           <h1 className={`text-[#f2e713] text-6xl md:text-5xl font-extrabold  tracking-tight  leading-none ${caramel.className}`}>
-           Frescura a tu puerta! <br />
+            Frescura a tu puerta! <br />
           </h1>
 
-                      {/* Subtext */}
+          {/* Subtext */}
           <p className={`px-5 text-white text-lg md:text-xl font-medium max-w-sm leading-relaxed  font-serif ${monserrat.className}`}>
-           Tu mercado favorito, sin salir de casa
+            Tu mercado favorito, sin salir de casa
           </p>
-            {/* Button */}
-            <button className=" mt-9 group relative px-14 py-2.5 bg-[#6ca300] hover:bg-[#7dbd00] text-white font-bold rounded-xl shadow-[0_10px_20px_-10px_rgba(108,163,0,0.5)] hover:shadow-[0_15px_25px_-5px_rgba(108,163,0,0.6)] transition-all duration-300 flex items-center gap-1 overflow-hidden active:scale-95">
-              {/* White glow effect on hover */}
-              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-              <span className="mb-1">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
-  <path d="M3.375 4.5C2.339 4.5 1.5 5.34 1.5 6.375V13.5h12V6.375c0-1.036-.84-1.875-1.875-1.875h-8.25ZM13.5 15h-12v2.625c0 1.035.84 1.875 1.875 1.875h.375a3 3 0 1 1 6 0h3a.75.75 0 0 0 .75-.75V15Z" />
-  <path d="M8.25 19.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0ZM15.75 6.75a.75.75 0 0 0-.75.75v11.25c0 .087.015.17.042.248a3 3 0 0 1 5.958.464c.853-.175 1.522-.935 1.464-1.883a18.659 18.659 0 0 0-3.732-10.104 1.837 1.837 0 0 0-1.47-.725H15.75Z" />
-  <path d="M19.5 19.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
-</svg>
+          {/* Button */}
+          <button className=" mt-9 group relative px-14 py-2.5 bg-[#6ca300] hover:bg-[#7dbd00] text-white font-bold rounded-xl shadow-[0_10px_20px_-10px_rgba(108,163,0,0.5)] hover:shadow-[0_15px_25px_-5px_rgba(108,163,0,0.6)] transition-all duration-300 flex items-center gap-1 overflow-hidden active:scale-95">
+            {/* White glow effect on hover */}
+            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+            <span className="mb-1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                <path d="M3.375 4.5C2.339 4.5 1.5 5.34 1.5 6.375V13.5h12V6.375c0-1.036-.84-1.875-1.875-1.875h-8.25ZM13.5 15h-12v2.625c0 1.035.84 1.875 1.875 1.875h.375a3 3 0 1 1 6 0h3a.75.75 0 0 0 .75-.75V15Z" />
+                <path d="M8.25 19.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0ZM15.75 6.75a.75.75 0 0 0-.75.75v11.25c0 .087.015.17.042.248a3 3 0 0 1 5.958.464c.853-.175 1.522-.935 1.464-1.883a18.659 18.659 0 0 0-3.732-10.104 1.837 1.837 0 0 0-1.47-.725H15.75Z" />
+                <path d="M19.5 19.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+              </svg>
 
 
 
 
 
-              </span>
-              <span className="text-large">HAZ TU PEDIDO</span>
-            </button>
+            </span>
+            <span className="text-large">HAZ TU PEDIDO</span>
+          </button>
 
 
         </div>
