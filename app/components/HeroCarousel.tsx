@@ -5,11 +5,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Fira_Sans } from "next/font/google";
 import { Source_Sans_3 } from "next/font/google";
+import { Cookie } from "next/font/google";
 import { MapPinIcon } from '@heroicons/react/24/solid'
 import { Handshake } from 'lucide-react';
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 const boldonse = Fira_Sans({
   subsets: ["latin"],
   weight: ["700"],
@@ -17,6 +19,12 @@ const boldonse = Fira_Sans({
 });
 
 const monserrat = Source_Sans_3({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+});
+
+const caramel = Cookie({
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
@@ -31,7 +39,7 @@ type SlideProps = {
 
 const slides: SlideProps[] = [
   { image: "/oranges-background.jpeg", title: "ESPECIALISTAS EN NARANJAS", description: "Naranjas frescas, jugosas y naturales", index: 0 },
-  { image: "/image1.png", title: "100% Natural", description: "No chemicals, just nature", index: 1 },
+  { image: "/image2.png", title: "100% Natural", description: "No chemicals, just nature", index: 1 },
   { image: "/image3.jpg", title: "Premium Quality", description: "Perfect for juice", index: 2 },
 ];
 
@@ -114,54 +122,63 @@ function Slide({ image, title, description, index }: SlideProps) {
   }
 
   else if (index === 1 || index === 2) {
-   return (
-<section className="relative w-full min-h-[750px] overflow-hidden justify-center px-6 ">
-      
-      {/* 1. Background Image with warm golden overlay */}
-      {/* Replace '/your-market-bg.jpg' with your actual image path */}
-      <div className="absolute inset-0 w-full h-full">
-         <Image
+    return (
+      <section className="relative w-full min-h-[750px] overflow-hidden justify-center px-6 ">
+
+        {/* 1. Background Image with warm golden overlay */}
+        {/* Replace '/your-market-bg.jpg' with your actual image path */}
+        <div className="absolute inset-0 w-full h-full">
+          <Image
             src={image}
             alt="Wholesale Produce Market"
             fill
             priority
             className="object-cover"
-         />
-        {/* A warm, slightly golden dark overlay to make the foreground pop */}
-        <div className="absolute inset-0 bg-[#3d2b1f]/30 mix-blend-multiply" />
-      </div>
-
-
-      {/* 2. Main Content Stack */}
-      <div className="relative z-10 flex flex-col items-center w-full max-w-xl mt-20">
-        
-        {/* --- THE GOLD SEMI-CIRCLE HEADER WITH ICON --- */}
-        {/* Using a rich gold gradient */}
-        <div className="bg-gradient-to-b from-[#d4af37] to-[#b8860b] pt-10 pb-2 px-20 rounded-t-full shadow-[0_-4px_15px_rgba(184,134,11,0.3)] z-20 flex justify-center items-center relative border-t border-white/20">
-            {/* Subtle inner shine effect */}
-            <div className="absolute inset-0 rounded-t-full bg-gradient-to-b from-white/20 to-transparent mix-blend-overlay"></div>
-            {/* The Handshake Icon - White for sharp contrast against the gold */}
-            <Handshake size={64} color="white" strokeWidth={1.25} className="drop-shadow-sm" />
+          />
+          {/* A warm, slightly golden dark overlay to make the foreground pop */}
+          <div className="absolute inset-0 bg-[#3d2b1f]/30 mix-blend-multiply" />
         </div>
 
-        {/* --- THE MAIN GLASS CARD --- */}
-        <div className="bg-white/60 backdrop-blur-xl border-b border-x border-white/40 w-full px-8 pt-6 pb-6 md:px-12 md:pt-10 md:pb-28 shadow-2xl rounded-sm text-center flex flex-col items-center relative">
+
+        {/* 2. Main Content Stack */}
+        <div className="relative z-10 flex flex-col items-center w-full max-w-xl mt-10">
+
           
+       
+
+
           {/* Heading - Using dark gold/brown tones for elegance */}
-          <h1 className="text-[#8b5e34] text-3xl md:text-5xl font-extrabold uppercase tracking-tight mb-2 leading-none">
-            MAYOREO <br />
-            {/* Lighter, richer gold for contrast */}
-            <span className="text-[#a67c00] drop-shadow-sm">DE PRODUCTOS FRESCOS</span>
+          <h1 className={`text-[#a67c00] text-7xl md:text-5xl font-extrabold  tracking-tight mb-2 leading-none ${caramel.className}`}>
+           Frescura a tu puerta! <br />
           </h1>
 
-          {/* Subtext */}
-          <p className="text-[#4a3c31] text-lg md:text-xl font-medium max-w-sm leading-relaxed mb-4 font-serif">
-           Proveemos frutas y verduras frescas de las mas alta calidad a nivel nacional.
+
+            {/* Button */}
+            <button className=" mt-6 group relative px-10 py-2.5 bg-[#6ca300] hover:bg-[#7dbd00] text-white font-bold rounded-xl shadow-[0_10px_20px_-10px_rgba(108,163,0,0.5)] hover:shadow-[0_15px_25px_-5px_rgba(108,163,0,0.6)] transition-all duration-300 flex items-center gap-1 overflow-hidden active:scale-95">
+              {/* White glow effect on hover */}
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+              <span className="mb-1">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+  <path d="M3.375 4.5C2.339 4.5 1.5 5.34 1.5 6.375V13.5h12V6.375c0-1.036-.84-1.875-1.875-1.875h-8.25ZM13.5 15h-12v2.625c0 1.035.84 1.875 1.875 1.875h.375a3 3 0 1 1 6 0h3a.75.75 0 0 0 .75-.75V15Z" />
+  <path d="M8.25 19.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0ZM15.75 6.75a.75.75 0 0 0-.75.75v11.25c0 .087.015.17.042.248a3 3 0 0 1 5.958.464c.853-.175 1.522-.935 1.464-1.883a18.659 18.659 0 0 0-3.732-10.104 1.837 1.837 0 0 0-1.47-.725H15.75Z" />
+  <path d="M19.5 19.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+</svg>
+
+
+
+
+
+              </span>
+              <span className="text-large">ORDENA</span>
+            </button>
+
+                      {/* Subtext */}
+          <p className={`px-5 text-white text-lg md:text-xl font-medium max-w-sm leading-relaxed mt-2 font-serif ${monserrat.className}`}>
+           Tu mercado favorito, sin salir de casa
           </p>
         </div>
-      </div>
-    </section>
-);
+      </section>
+    );
 
   }
   // return (
