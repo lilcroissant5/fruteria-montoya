@@ -45,7 +45,7 @@ const slides: SlideProps[] = [
 
 export default function HeroCarousel() {
   return (
-    <div className="relative w-full h-[80vh] md:h-[60vh] lg:h-[60vh]">
+    <div className="relative w-full h-[85vh] md:h-[60vh] lg:h-[60vh]">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         navigation={{
