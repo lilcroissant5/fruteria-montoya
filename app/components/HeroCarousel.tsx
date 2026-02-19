@@ -145,7 +145,7 @@ function Slide({ image, title, description, index }: SlideProps) {
 
 
           {/* Heading - Using dark gold/brown tones for elegance */}
-          <h1 className={`text-[#a67c00] text-6xl md:text-5xl font-extrabold  tracking-tight mb-2 leading-none ${caramel.className}`}>
+          <h1 className={`text-[#f2e713] text-6xl md:text-5xl font-extrabold  tracking-tight mb-2 leading-none ${caramel.className}`}>
            Frescura a tu puerta! <br />
           </h1>
 
