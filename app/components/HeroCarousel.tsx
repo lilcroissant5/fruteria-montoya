@@ -145,13 +145,16 @@ function Slide({ image, title, description, index }: SlideProps) {
 
 
           {/* Heading - Using dark gold/brown tones for elegance */}
-          <h1 className={`text-[#f2e713] text-6xl md:text-5xl font-extrabold  tracking-tight mb-2 leading-none ${caramel.className}`}>
+          <h1 className={`text-[#f2e713] text-6xl md:text-5xl font-extrabold  tracking-tight  leading-none ${caramel.className}`}>
            Frescura a tu puerta! <br />
           </h1>
 
-
+                      {/* Subtext */}
+          <p className={`px-5 text-white text-lg md:text-xl font-medium max-w-sm leading-relaxed  font-serif ${monserrat.className}`}>
+           Tu mercado favorito, sin salir de casa
+          </p>
             {/* Button */}
-            <button className=" mt-6 group relative px-10 py-2.5 bg-[#6ca300] hover:bg-[#7dbd00] text-white font-bold rounded-xl shadow-[0_10px_20px_-10px_rgba(108,163,0,0.5)] hover:shadow-[0_15px_25px_-5px_rgba(108,163,0,0.6)] transition-all duration-300 flex items-center gap-1 overflow-hidden active:scale-95">
+            <button className=" mt-8 group relative px-10 py-2.5 bg-[#6ca300] hover:bg-[#7dbd00] text-white font-bold rounded-xl shadow-[0_10px_20px_-10px_rgba(108,163,0,0.5)] hover:shadow-[0_15px_25px_-5px_rgba(108,163,0,0.6)] transition-all duration-300 flex items-center gap-1 overflow-hidden active:scale-95">
               {/* White glow effect on hover */}
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               <span className="mb-1">
@@ -169,10 +172,7 @@ function Slide({ image, title, description, index }: SlideProps) {
               <span className="text-large">ORDENA</span>
             </button>
 
-                      {/* Subtext */}
-          <p className={`px-5 text-white text-lg md:text-xl font-medium max-w-sm leading-relaxed mt-2 font-serif ${monserrat.className}`}>
-           Tu mercado favorito, sin salir de casa
-          </p>
+
         </div>
       </section>
     );
